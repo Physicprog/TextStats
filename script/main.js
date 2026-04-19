@@ -7,7 +7,7 @@ async function loadDico() {
     const failed = [];
 
     try {
-        const res1 = await fetch('./../ressources/dico_fr.txt');
+        const res1 = await fetch('./ressources/dico_fr.txt');
         if (res1.ok) {
             const text1 = await res1.text();
             const lines1 = text1.split('\n');
@@ -26,7 +26,7 @@ async function loadDico() {
     }
 
     try {
-        const res2 = await fetch('./../ressources/dico_eng.txt');
+        const res2 = await fetch('./ressources/dico_eng.txt');
         if (res2.ok) {
             const text2 = await res2.text();
             const lines2 = text2.split('\n');
