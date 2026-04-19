@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Analyzer</title>
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Text Analyzer</h1>
+    <p class="subtitle">Statistics, proper nouns, unknown words &amp; frequencies</p>
+
+    <div class="dico-status" id="dico-status">
+      <span class="dot dot-warn"></span>
+      Loading dico_fr.txt + dico_eng.txt…
+    </div>
+
+    <textarea id="input" placeholder="Paste or type your text here…"></textarea>
+
+    <div class="btn-row">
+      <button id="btn-paste">Paste</button>
+      <button id="btn-clear">Clear</button>
+    </div>
+
+    <div id="results">
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-label">Words</div>
+          <div class="stat-value" id="s-words">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Characters</div>
+          <div class="stat-value" id="s-chars">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Spaces</div>
+          <div class="stat-value" id="s-spaces">0</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Sentences</div>
+          <div class="stat-value" id="s-sentences">0</div>
+        </div>
+      </div>
+
+      <div class="two-col">
+        <div class="section">
+          <div class="section-title">Top 5 Most Common Words</div>
+          <div class="top-words" id="top-words"></div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Potential Proper Nouns</div>
+          <div class="proper-nouns" id="proper-nouns">
+            <span class="empty-state">No potential proper nouns detected</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="section" id="unknown-section">
+        <div class="section-title">Unknown Words</div>
+        <div class="unknown-section" id="unknown-words"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <script type="module" src="./script/main.js"></script>
+</body>
+
+</html>

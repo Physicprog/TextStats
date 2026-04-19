@@ -1,0 +1,260 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f5f4f0;
+    color: #1a1a18;
+    min-height: 100vh;
+    padding: 2rem 1rem;
+}
+
+h1 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+    color: #1a1a18;
+}
+
+.subtitle {
+    font-size: 0.88rem;
+    color: #6b6b67;
+    margin-bottom: 1.5rem;
+}
+
+.container {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 100%;
+    height: 180px;
+    padding: 1rem;
+    border: 1px solid #d3d1c7;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    background: #fff;
+    color: #1a1a18;
+    outline: none;
+    transition: border-color 0.15s;
+    line-height: 1.6;
+}
+
+textarea:focus {
+    border-color: #7f77dd;
+}
+
+textarea::placeholder {
+    color: #b4b2a9;
+}
+
+.btn-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    padding: 0.55rem 1.3rem;
+    border-radius: 8px;
+    font-size: 0.88rem;
+    font-family: inherit;
+    cursor: pointer;
+    border: 1px solid #d3d1c7;
+    transition: background 0.12s, border-color 0.12s;
+}
+
+#btn-paste {
+    background: #534ab7;
+    color: #fff;
+    border-color: #534ab7;
+    font-weight: 500;
+}
+
+#btn-paste:hover {
+    background: #3c3489;
+    border-color: #3c3489;
+}
+
+#btn-clear {
+    background: #fff;
+    color: #6b6b67;
+}
+
+#btn-clear:hover {
+    background: #f1efe8;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.stat-card {
+    background: #fff;
+    border: 1px solid #d3d1c7;
+    border-radius: 10px;
+    padding: 1rem 1.1rem;
+}
+
+.stat-label {
+    font-size: 0.75rem;
+    color: #888780;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.3rem;
+}
+
+.stat-value {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #534ab7;
+    line-height: 1;
+}
+
+.section {
+    background: #fff;
+    border: 1px solid #d3d1c7;
+    border-radius: 10px;
+    padding: 1.1rem 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.section-title {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #888780;
+    margin-bottom: 0.9rem;
+    font-weight: 500;
+}
+
+.top-words {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.word-bar-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.word-label {
+    font-size: 0.9rem;
+    min-width: 120px;
+    font-weight: 500;
+    color: #1a1a18;
+}
+
+.bar-track {
+    flex: 1;
+    height: 6px;
+    background: #f1efe8;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+    background: #7f77dd;
+    border-radius: 3px;
+    transition: width 0.4s ease;
+}
+
+.word-count {
+    font-size: 0.8rem;
+    color: #888780;
+    min-width: 28px;
+    text-align: right;
+}
+
+.proper-nouns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tag {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.tag-proper {
+    background: #eeedfe;
+    color: #3c3489;
+    border: 1px solid #afa9ec;
+}
+
+.tag-unknown {
+    background: #fcebeb;
+    color: #791f1f;
+    border: 1px solid #f09595;
+}
+
+.unknown-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.dico-status {
+    font-size: 0.78rem;
+    color: #888780;
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot-ok {
+    background: #639922;
+}
+
+.dot-warn {
+    background: #ef9f27;
+}
+
+.empty-state {
+    text-align: center;
+    color: #b4b2a9;
+    font-size: 0.88rem;
+    padding: 2rem 0;
+}
+
+#results {
+    display: none;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 520px) {
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
