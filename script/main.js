@@ -52,8 +52,6 @@ async function loadDico() {
         }
         const loadedText = loaded.join(' + ');
         statusEl.innerHTML = '<span class="dot dot-ok"></span> ' + loadedText + '<strong>' + dictionary.length.toLocaleString() + '</strong> words in total' + failedMsg;
-    } else {
-        statusEl.innerHTML = '<span class="dot dot-warn"></span> No dictionary found — place <code>dico_fr.txt</code> and <code>dico_eng.txt</code> in the same folder';
     }
 }
 
